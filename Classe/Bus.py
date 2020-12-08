@@ -1,6 +1,5 @@
 class Bus():
-    def __init__(self, nom, referent, limite):
-        self.nom = nom
+    def __init__(self, referent, limite):
         self.referent = referent
         self.limite = limite
         self.classes = []
