@@ -1,8 +1,8 @@
 import Error
 
-class Car():
-    def __init__(self, nom, referent, limite):
-        self.nom = nom
+
+class Bus():
+    def __init__(self, referent, limite):
         self.referent = referent
         self.limite = limite
         self.classes = []
@@ -20,7 +20,7 @@ class Car():
 
     def start(self):
         for classe in self.classes:
-            if (len(classe) > 0):
+            if len(classe) > 0:
                 pass
             else:
                 raise Error.BusIsEmptyError
