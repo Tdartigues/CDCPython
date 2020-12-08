@@ -9,12 +9,6 @@ class Bus():
         self.eleves = []
         self.professeurs = []
 
-<<<<<<< Updated upstream
-    def ajout(self, eleve):
-        if (len(self.eleves) < self.limite):
-            if len(self.classes) > 2:
-                raise Error.TooMuchClassesPerBusError
-=======
     def add(self, person, isStudent):
         if isStudent :
             
@@ -22,7 +16,6 @@ class Bus():
         if (len(self.eleves) + len(self.professeurs)) < self.limite:
             if len(self.classes) > 3:
                 raise TooMuchClassesPerBusError
->>>>>>> Stashed changes
             else:
                 if isStudent :
                     self.eleves.append(person)
@@ -44,15 +37,8 @@ class Bus():
             if len(classe) > 0:
                 pass
             else:
-<<<<<<< Updated upstream
-                raise Error.BusIsEmptyError
-        if ((len(self.professeurs) * 10 >= len(self.eleves))):
-            raise Error.NotEnoughTeacherError
-=======
                 raise BusIsEmptyError
-
         if (len(self.professeurs) * 10 >= len(self.eleves)):
             raise NotEnoughTeacherError
         
         print("On est partie")
->>>>>>> Stashed changes
