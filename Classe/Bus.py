@@ -9,9 +9,9 @@ class Bus():
         self.eleves = []
         self.professeurs = []
 
-    def add(self, eleve):
-        if len(self.eleves) < self.limite:
-            if len(self.eleves) > len(set(self.eleves)) and len(self.eleves) > 2:
+    def ajout(self, eleve):
+        if (len(self.eleves) < self.limite):
+            if len(self.classes) > 2:
                 raise Error.TooMuchClassesPerBusError
             else:
                 self.eleves.append(eleve)
@@ -24,5 +24,5 @@ class Bus():
                 pass
             else:
                 raise Error.BusIsEmptyError
-        if (len(self.professeurs) / len(self.eleves)) != 0.1:
+        if ((len(self.professeurs) * 10 >= len(self.eleves))):
             raise Error.NotEnoughTeacherError
