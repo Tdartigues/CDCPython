@@ -1,4 +1,4 @@
-class Car():
+class Bus():
     def __init__(self, nom, referent, limite):
         self.nom = nom
         self.referent = referent
@@ -6,5 +6,5 @@ class Car():
         self.classes = []
         self.eleves = []
 
-    def ajout(self, eleve):
+    def add(self, eleve):
         self.eleves.append(eleve)
