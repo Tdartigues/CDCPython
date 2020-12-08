@@ -1,4 +1,4 @@
-from .Error import *
+import Error
 
 
 class Bus():
@@ -9,50 +9,20 @@ class Bus():
         self.eleves = []
         self.professeurs = []
 
-<<<<<<< Updated upstream
     def ajout(self, eleve):
         if (len(self.eleves) < self.limite):
             if len(self.classes) > 2:
                 raise Error.TooMuchClassesPerBusError
-=======
-    def add(self, person, isStudent):
-        if isStudent :
-            
-
-        if (len(self.eleves) + len(self.professeurs)) < self.limite:
-            if len(self.classes) > 3:
-                raise TooMuchClassesPerBusError
->>>>>>> Stashed changes
             else:
-                if isStudent :
-                    self.eleves.append(person)
-                else : 
-                    self.professeurs.append(person)
+                self.eleves.append(eleve)
         else:
-            raise BusOverloadError
+            raise Error.BusOverloadError
 
     def start(self):
-        for e in eleves:
-            if self.classes.count(e.classe) == 0 :
-                if len(self.classes) > 2:
-                    self.classes.clear
-                    raise TooMuchClassesPerBusError
-                else:
-                    self.classes.append(e.classe)
-
         for classe in self.classes:
             if len(classe) > 0:
                 pass
             else:
-<<<<<<< Updated upstream
                 raise Error.BusIsEmptyError
         if ((len(self.professeurs) * 10 >= len(self.eleves))):
             raise Error.NotEnoughTeacherError
-=======
-                raise BusIsEmptyError
-
-        if (len(self.professeurs) * 10 >= len(self.eleves)):
-            raise NotEnoughTeacherError
-        
-        print("On est partie")
->>>>>>> Stashed changes

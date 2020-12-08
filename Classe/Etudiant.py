@@ -1,4 +1,4 @@
-from Classe.Personne import Personne
+from CDCPython.Classe.Personne import Personne
 
 
 class Etudiant(Personne):

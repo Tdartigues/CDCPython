@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'D:/EPSI/Cours/Python/TP1/CDCPython/Ui/mainwindow.ui'
+# Form implementation generated from reading ui file 'D:/EPSI/Cours/Python/TP1/CDCPython/mainwindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.1
 #
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
-        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 1081, 281))
+        self.tabWidget.setGeometry(QtCore.QRect(20, 20, 1021, 241))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -98,10 +98,10 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(4)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-        self.lineEditNewLycee.text()
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -122,10 +122,6 @@ class Ui_MainWindow(object):
         self.validerNewBus.setText(_translate("MainWindow", "Valider"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabBus), _translate("MainWindow", "Bus"))
 
-    def NewLycee(self):
-        nomLycee = self.lineEditNewLycee.text()
-        if(nomLycee != ''):
-            self.labBvnLycee.setText(f"Bienvenue à {nomLycee}")   
 
 if __name__ == "__main__":
     import sys
@@ -133,6 +129,5 @@ if __name__ == "__main__":
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
-    
     MainWindow.show()
     sys.exit(app.exec_())
