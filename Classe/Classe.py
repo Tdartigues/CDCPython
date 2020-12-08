@@ -4,5 +4,5 @@ class Classe():
         self.limite = limite
         self.eleves = []
 
-    def ajout(self, eleve):
+    def add(self, eleve):
         self.eleves.append(eleve)

@@ -2,15 +2,14 @@ import Error
 
 
 class Bus():
-    def __init__(self, nom, referent, limite):
-        self.nom = nom
+    def __init__(self, referent, limite):
         self.referent = referent
         self.limite = limite
         self.classes = []
         self.eleves = []
         self.professeurs = []
 
-    def ajout(self, eleve):
+    def add(self, eleve):
         if len(self.eleves) < self.limite:
             if len(self.eleves) > len(set(self.eleves)) and len(self.eleves) > 2:
                 raise Error.TooMuchClassesPerBusError
