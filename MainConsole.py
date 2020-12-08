@@ -2,6 +2,9 @@ from CDCPython.Classe.Ecole import Ecole
 from CDCPython.Classe.Classe import Classe
 from CDCPython.Classe.Etudiant import Etudiant
 from CDCPython.Classe.Professeur import Professeur
+from CDCPython.Classe.Bus import Bus
+
+# Question 1 :
 
 print("Initialisation des données.")
 
@@ -84,4 +87,20 @@ for i in range(len(ecole.classes)):
 for i in range(len(ecole.professeurs)):
     print(ecole.professeurs[i].nom + ' ' + ecole.professeurs[i].prenom)
 
+# Question 2 :
 
+ajoutBus = True
+
+while ajoutBus:
+    limite = int(input('Nombre maximum : '))
+    bus = Bus(limite, 'choisir plus tard')
+    print("Votre choix : ")
+    print("\t1-Créer un autre bus")
+    print("\t2-Annuler")
+    choix = int(input())
+    if choix == 1:
+        print('---------')
+    elif choix == 2:
+        ajoutBus = False
+    else:
+        print('Veuillez taper 1 ou 2.')
